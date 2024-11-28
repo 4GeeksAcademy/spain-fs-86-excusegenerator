@@ -1,5 +1,23 @@
-import "./style.css";
+/* Este es el mismo proyecto del excuse generator, pero refactorizado.
+Debajo dejo el código original para la comparación*/
 
+function getRandomElement(listElements) {
+  let element = listElements[Math.floor(Math.random() * listElements.length)];
+  return element;
+}
+
+function excuseGeneratorNimbus2000() {
+  const who = getRandomElement(["Carlos", "Hans", "Un alemán"]);
+  const action = getRandomElement(["se comió", "quemó", "vendió"]);
+  const what = getRandomElement(["mi ordenador", "España", "mi casa"]);
+  const when = getRandomElement(["hoy", "ayer", "no sé cuando"]);
+  return who + " " + action + " " + what + " " + when;
+}
+document.getElementById(
+  "excuseGeneratorNimbus2000"
+).innerHTML = excuseGeneratorNimbus2000();
+
+/*
 function getRandomWho() {
   const tipesOfName = new Array("Carlos", "Hans", "Un alemán");
   let rnd = Math.random();
@@ -33,7 +51,4 @@ function excuseGeneratorNimbus2000() {
   const what = getRandomWhat();
   const when = getRandomWhen();
   return who + " " + action + " " + what + " " + when;
-}
-document.getElementById(
-  "excuseGeneratorNimbus2000"
-).innerHTML = excuseGeneratorNimbus2000();
+*/
